@@ -21,7 +21,11 @@ export default function ProductCard(props) {
       </div>
       <p className="title"> {product?.name}</p>
       <p className="description">{product?.description}</p>
-      <div>{stars.map((i) => i)}</div>
+      <div>
+        {stars.map((i, index) => (
+          <span key={index}>{i}</span>
+        ))}
+      </div>
       <p className="price">{product?.price} EGP</p>
 
       <div className="card-buttons">

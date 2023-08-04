@@ -18,7 +18,7 @@ export default function NavBar() {
         <img height={52} src="/images/logo.png" alt="LOGO" />
         <ul>
           {headers.map((i) => (
-            <li>{i}</li>
+            <li key={i}>{i}</li>
           ))}
         </ul>
       </div>

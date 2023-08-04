@@ -4,6 +4,17 @@ import item3 from "../images/item3.png";
 import item4 from "../images/item4.png";
 import item5 from "../images/item5.png";
 
+export const currentProduct = {
+  name: "Product Name",
+  price: 3000,
+  description:
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+  rating: 3,
+  imgURL: item1,
+  size: ["2*3M", "4*3M", "4*4M"],
+  color: ["#FFFFFF", "#000000", "#0052D3", "#FCBC04"],
+};
+
 export const products = [
   {
     name: "Product Name",
