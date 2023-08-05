@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { products } from "../utils/services/data";
+import { ReactComponent as TrashIcon } from "../utils/icons/trash.svg";
 
 export default class Cart extends Component {
   render() {
@@ -13,9 +14,9 @@ export default class Cart extends Component {
               <CartItem product={p} />
             ))}
           </div>
-          <div>
+          <div className="total">
             <span>subtotal</span>
-            <span>5000 EGP</span>
+            <span className="red-text">5000 EGP</span>
           </div>
 
           <button className="primary-button">Go To Cart</button>
@@ -37,6 +38,9 @@ function CartItem(props) {
         <span className="gray-text">size: {product.size[0]}</span>
         <span className="gray-text">color: {product.color[0]}</span>
         <span className="red-text ">{product.price} EGP</span>
+      </div>
+      <div className="trash">
+        <TrashIcon />
       </div>
     </div>
   );

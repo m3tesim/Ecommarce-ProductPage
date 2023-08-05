@@ -26,6 +26,7 @@
   background-color: $lightGray-color;
   border-radius: 50%;
   padding: 0.4rem 0.6rem;
+  cursor: pointer;
 }
 
 //card styles
@@ -268,8 +269,30 @@
     font-size: 16px;
     font-weight: 500;
   }
-  .red-text {
-    font-size: 14px;
+
+  .total {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+  .total :first-child {
+    color: #7e7e7e;
+  }
+  button {
+    width: 100%;
+    cursor: pointer;
+  }
+  .trash {
+    display: flex;
+    place-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
   }
 }
 .gray-text {

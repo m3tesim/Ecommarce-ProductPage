@@ -12,6 +12,30 @@ const headers = [
 ];
 
 class NavBar extends Component {
+  state = {
+    dropDown: false,
+  };
+
+  componentDidMount() {
+    document.addEventListener("click", this.handleClickOutside, true);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("click", this.handleClickOutside, true);
+  }
+
+  wrapper = React.createRef();
+
+  handleClickOutside = (event) => {
+    if (!this.wrapper.current || !this.wrapper.current.contains(event.target)) {
+      this.setState({
+        dropDown: false,
+      });
+    }
+  };
+
+  dropDown = (value) => {
+    this.setState({ dropDown: value });
+  };
   render() {
     return (
       <div className="nav-container">
@@ -23,14 +47,17 @@ class NavBar extends Component {
             ))}
           </ul>
         </div>
-        <div className="nav-icons">
+        <div className="nav-icons" ref={this.wrapper}>
           <div className="icon">
             <SearchIcon />
           </div>
-          <div className="icon">
+          <div
+            onClick={() => this.dropDown(!this.state.dropDown)}
+            className="icon cartDown"
+          >
             <CartIcon />
           </div>
-          <Cart />
+          {this.state.dropDown && <Cart />}
 
           <div className="icon">
             <ProfileIcon />
