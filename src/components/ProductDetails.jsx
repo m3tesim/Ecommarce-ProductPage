@@ -4,7 +4,7 @@ import { ReactComponent as Heart } from "../utils/icons/heart.svg";
 import { ReactComponent as Video } from "../utils/icons/video.svg";
 import { ReactComponent as Share } from "../utils/icons/share.svg";
 import { ReactComponent as Hover } from "../utils/icons/hover.svg";
-
+import { CartContext } from "./CartItemsProvider";
 class ProductDetails extends Component {
   state = {
     size: null,
@@ -21,6 +21,13 @@ class ProductDetails extends Component {
   };
   handelColor = (color) => {
     this.setState({ color });
+  };
+  handleAddToCart = (contextCallBack) => {
+    let product = { ...this.props.product };
+    product.size = this.state.size;
+    product.color = this.state.color;
+    contextCallBack(product);
+    this.setState({ color: null, size: null });
   };
   render() {
     console.log(this.state.size);
@@ -94,7 +101,16 @@ class ProductDetails extends Component {
               <span>{this.state.count}</span>
               <span onClick={() => this.itemCount(1)}>&#65291;</span>
             </div>
-            <button className="primary-button">Buy Now</button>
+            <CartContext.Consumer>
+              {(context) => (
+                <button
+                  onClick={() => this.handleAddToCart(context.add)}
+                  className="primary-button"
+                >
+                  Buy Now
+                </button>
+              )}
+            </CartContext.Consumer>
           </div>
           <div className="icons">
             <div>
