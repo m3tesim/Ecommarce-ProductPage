@@ -15,6 +15,9 @@
     display: flex;
     gap: 32px;
   }
+  li {
+    cursor: pointer;
+  }
 
   .nav-icons {
     display: flex;
@@ -109,7 +112,7 @@
   padding: 0.5rem 1.5rem;
   border-radius: 5px;
   height: 39px;
-
+  cursor: pointer;
   text-transform: uppercase;
 }
 .heart-icon {
@@ -166,7 +169,15 @@
     padding: 0.5rem 1rem;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
+  .border {
+    border: 0.5px solid black;
+  }
+  .checked {
+    border: 1.644px solid #b93c3c;
+  }
+
   .icons {
     display: flex;
     color: #707070;
@@ -187,6 +198,15 @@
     border-radius: 50%;
     padding: 0.5rem;
   }
+}
+.hover-label {
+  display: flex;
+  width: 128.527px;
+  height: 46.999px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6.577px;
+  border: 0.822px solid #c7c7c5;
 }
 .gallery {
   display: grid;
@@ -218,21 +238,59 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  .title {
+    font-size: 23.02px;
+    font-weight: 500;
+    line-height: 150%; /* 34.53px */
+    text-transform: capitalize;
+    display: block;
+    padding-bottom: 0.5rem 0;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.55rem;
+  }
+
+  button {
+    width: 284px;
+    height: 50px;
+    display: block;
+  }
+  .buttons-container {
+    margin-top: 3rem;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 14px;
+  }
+  .red-text {
+    padding-top: 1rem;
+  }
+}
+.count-label {
+  display: flex;
+  place-items: center;
+  justify-content: space-evenly;
+  font-size: larger;
+  width: 153px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 11.51px;
+  border: 0.708px solid #d9d9d9;
+  cursor: pointer;
 }
 
 .colors-container {
   display: flex;
   gap: 1rem;
-  .border {
-    border: 0.5px solid black;
-  }
 }
 .color-label {
   display: inline-block;
-  padding: 5px;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 //cart Component Style

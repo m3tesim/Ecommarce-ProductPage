@@ -3,9 +3,27 @@ import { ReactComponent as Star } from "../utils/icons/star.svg";
 import { ReactComponent as Heart } from "../utils/icons/heart.svg";
 import { ReactComponent as Video } from "../utils/icons/video.svg";
 import { ReactComponent as Share } from "../utils/icons/share.svg";
+import { ReactComponent as Hover } from "../utils/icons/hover.svg";
 
 class ProductDetails extends Component {
+  state = {
+    size: null,
+    color: null,
+    count: 1,
+  };
+  itemCount = (value) => {
+    if (value > 0) this.setState({ count: this.state.count + 1 });
+    if (value < 0 && this.state.count > 1)
+      this.setState({ count: this.state.count - 1 });
+  };
+  handelSize = (size) => {
+    this.setState({ size });
+  };
+  handelColor = (color) => {
+    this.setState({ color });
+  };
   render() {
+    console.log(this.state.size);
     const { product } = this.props;
 
     const stars = [];
@@ -23,41 +41,60 @@ class ProductDetails extends Component {
           <img className="main-img" src={product.imgURL} alt="product" />
         </div>
         <div className="product-info">
-          <div>
-            <h1>{product.name}</h1>
-
-            {stars.map((i, index) => (
-              <span key={index}>{i}</span>
-            ))}
+          <div className="header">
+            <div>
+              <span className="title">{product.name}</span>
+              <div>
+                {" "}
+                {stars.map((i, index) => (
+                  <span key={index}>{i}</span>
+                ))}
+              </div>
+            </div>
+            <div className="hover-label">
+              <Hover />
+            </div>
           </div>
           <div className="price">
             {product.price} EGP
             <span className="old-price"> {product.price} EGP</span>
           </div>
           <div className="description ">{product.description}</div>
-          <p className="red-text">size</p>
+          <span className="red-text">size</span>
           <div className="size-container">
             {product?.size?.map((i, index) => (
-              <span className="size-label" key={index}>
+              <span
+                className={`size-label ${this.state.size === i && "checked"} `}
+                key={index}
+                onClick={() => this.handelSize(i)}
+              >
                 {i}
               </span>
             ))}
           </div>
-          <p className="red-text">color</p>
+          <span className="red-text">color</span>
           <div className="colors-container">
             {product?.color?.map((i, index) => {
               const border = i.value === "#FFFFFF" ? "border" : "";
               return (
                 <span
-                  className={` color-label ${border}`}
+                  onClick={() => this.handelColor(i.name)}
+                  className={` color-label  ${
+                    this.state.color === i.name && "checked"
+                  } ${border}`}
                   style={{ backgroundColor: i["value"] }}
                   key={index}
                 ></span>
               );
             })}
           </div>
-          <div>
-            <button className="primary-button">Add To Cart</button>
+          <div className="buttons-container">
+            <div className="count-label">
+              <span onClick={() => this.itemCount(-1)}>&#65293;</span>
+              <span>{this.state.count}</span>
+              <span onClick={() => this.itemCount(1)}>&#65291;</span>
+            </div>
+            <button className="primary-button">Buy Now</button>
           </div>
           <div className="icons">
             <div>
