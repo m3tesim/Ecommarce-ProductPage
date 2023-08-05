@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import { ReactComponent as ProfileIcon } from "../utils/icons/profile.svg";
 import { ReactComponent as SearchIcon } from "../utils/icons/search.svg";
 import { ReactComponent as CartIcon } from "../utils/icons/shopping-cart.svg";
-
+import Cart from "./cart";
 const headers = [
   "Products",
   "Best Seller",
@@ -11,28 +11,34 @@ const headers = [
   "Contact Us",
 ];
 
-export default function NavBar() {
-  return (
-    <div className="nav-container">
-      <div className="headers">
-        <img height={52} src="/images/logo.png" alt="LOGO" />
-        <ul>
-          {headers.map((i) => (
-            <li key={i}>{i}</li>
-          ))}
-        </ul>
+class NavBar extends Component {
+  render() {
+    return (
+      <div className="nav-container">
+        <div className="headers">
+          <img height={52} src="/images/logo.png" alt="LOGO" />
+          <ul>
+            {headers.map((i) => (
+              <li key={i}>{i}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="nav-icons">
+          <div className="icon">
+            <SearchIcon />
+          </div>
+          <div className="icon">
+            <CartIcon />
+          </div>
+          <Cart />
+
+          <div className="icon">
+            <ProfileIcon />
+          </div>
+        </div>
       </div>
-      <div className="nav-icons">
-        <div className="icon">
-          <SearchIcon />
-        </div>
-        <div className="icon">
-          <CartIcon />
-        </div>
-        <div className="icon">
-          <ProfileIcon />
-        </div>
-      </div>
-    </div>
-  );
+    );
+  }
 }
+
+export default NavBar;

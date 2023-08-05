@@ -7,6 +7,7 @@ class ProductPage extends Component {
     return (
       <div className="product-page">
         <div>ProductPage</div>
+
         <ProductDetails product={currentProduct} />
         <SuggestionSection />
       </div>
