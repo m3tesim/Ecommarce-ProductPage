@@ -14,8 +14,13 @@ class ProductDetails extends Component {
     }
     return (
       <section className="product-details container">
-        <div>
-          <img src={product.imgURL} alt="product" />
+        <div className="gallery">
+          <div className="side-images">
+            {product?.sideImages?.map((i, index) => (
+              <img className="side-img" key={index} src={i} alt="product" />
+            ))}
+          </div>
+          <img className="main-img" src={product.imgURL} alt="product" />
         </div>
         <div className="product-info">
           <div>

@@ -5,7 +5,7 @@ import { currentProduct } from "../utils/services/data";
 class ProductPage extends Component {
   render() {
     return (
-      <div className="product-page">
+      <div>
         <div>ProductPage</div>
 
         <ProductDetails product={currentProduct} />

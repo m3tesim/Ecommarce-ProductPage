@@ -18,8 +18,10 @@
 
   .nav-icons {
     display: flex;
-    gap: 1rem;
     place-items: center;
+  }
+  .icon {
+    margin-right: 1rem;
   }
 }
 .icon {
@@ -33,7 +35,7 @@
 
 .card-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   .card {
     position: relative;
@@ -85,14 +87,13 @@
 
 //other styling
 .container {
-  padding: 5rem 9rem;
+  margin: 6rem 9rem;
 }
 
 .suggest-section {
   display: flex;
   flex-direction: column;
   h2 {
-    margin-left: 1rem;
     font-size: 40px;
 
     font-weight: 500;
@@ -187,11 +188,36 @@
     padding: 0.5rem;
   }
 }
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1rem;
+  img {
+    border-radius: 15px;
+  }
+  .main-img {
+    border: 0.5px solid $darkGray-color;
+    padding: 35px 30px;
+  }
+  .side-img {
+    border: 0.5px solid $darkGray-color;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+.side-images {
+  width: 87.336px;
+  height: 105.178px;
+  img {
+    width: 87.336px;
+    height: 105.178px;
+  }
+}
 
 .product-info {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .colors-container {
