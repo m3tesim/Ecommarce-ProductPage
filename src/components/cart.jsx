@@ -36,7 +36,7 @@ function CartItem(props) {
       <div className="info">
         <span className="name"> {product.name}</span>
         <span className="gray-text">size: {product.size[0]}</span>
-        <span className="gray-text">color: {product.color[0]}</span>
+        <span className="gray-text">color: {product.color[0]["name"]}</span>
         <span className="red-text ">{product.price} EGP</span>
       </div>
       <div className="trash">

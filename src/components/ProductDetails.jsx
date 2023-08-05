@@ -46,11 +46,11 @@ class ProductDetails extends Component {
           <p className="red-text">color</p>
           <div className="colors-container">
             {product?.color?.map((i, index) => {
-              const border = i === "#FFFFFF" ? "border" : "";
+              const border = i.value === "#FFFFFF" ? "border" : "";
               return (
                 <span
                   className={` color-label ${border}`}
-                  style={{ backgroundColor: i }}
+                  style={{ backgroundColor: i["value"] }}
                   key={index}
                 ></span>
               );

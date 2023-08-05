@@ -6,8 +6,6 @@ class ProductPage extends Component {
   render() {
     return (
       <div>
-        <div>ProductPage</div>
-
         <ProductDetails product={currentProduct} />
         <SuggestionSection />
       </div>

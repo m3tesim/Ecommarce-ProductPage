@@ -16,7 +16,12 @@ export const currentProduct = {
   imgURL: item1,
   sideImages: [item1, productImage1, productImage2, productImage3],
   size: ["2*3M", "4*3M", "4*4M"],
-  color: ["#FFFFFF", "#000000", "#0052D3", "#FCBC04"],
+  color: [
+    { name: "white", value: "#FFFFFF" },
+    { name: "black ", value: "#000000" },
+    { name: "blue", value: "#0052D3" },
+    { name: "yellow", value: "#FCBC04" },
+  ],
 };
 
 export const products = [
@@ -28,7 +33,12 @@ export const products = [
     rating: 3,
     imgURL: item2,
     size: ["2*3M", "4*3M", "4*4M"],
-    color: ["#FFFFFF", "#000000", "#0052D3", "#FCBC04"],
+    color: [
+      { name: "white", value: "#FFFFFF" },
+      { name: "black ", value: "#000000" },
+      { name: "blue", value: "#0052D3" },
+      { name: "yellow", value: "#FCBC04" },
+    ],
   },
   {
     name: "Product Name",
@@ -38,7 +48,12 @@ export const products = [
     rating: 4,
     imgURL: item3,
     size: ["2*3M", "4*3M", "4*4M"],
-    color: ["#FFFFFF", "#000000", "#0052D3", "#FCBC04"],
+    color: [
+      { name: "white", value: "#FFFFFF" },
+      { name: "black ", value: "#000000" },
+      { name: "blue", value: "#0052D3" },
+      { name: "yellow", value: "#FCBC04" },
+    ],
   },
   {
     name: "Product Name",
@@ -48,7 +63,12 @@ export const products = [
     rating: 5,
     imgURL: item4,
     size: ["2*3M", "4*3M", "4*4M"],
-    color: ["#FFFFFF", "#000000", "#0052D3", "#FCBC04"],
+    color: [
+      { name: "white", value: "#FFFFFF" },
+      { name: "black ", value: "#000000" },
+      { name: "blue", value: "#0052D3" },
+      { name: "yellow", value: "#FCBC04" },
+    ],
   },
   {
     name: "Product Name",
@@ -58,6 +78,11 @@ export const products = [
     rating: 2,
     imgURL: item5,
     size: ["2*3M", "4*3M", "4*4M"],
-    color: ["#FFFFFF", "#000000", "#0052D3", "#FCBC04"],
+    color: [
+      { name: "white", value: "#FFFFFF" },
+      { name: "black ", value: "#000000" },
+      { name: "blue", value: "#0052D3" },
+      { name: "yellow", value: "#FCBC04" },
+    ],
   },
 ];
