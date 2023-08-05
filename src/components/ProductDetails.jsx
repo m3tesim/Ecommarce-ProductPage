@@ -106,6 +106,7 @@ class ProductDetails extends Component {
                 <button
                   onClick={() => this.handleAddToCart(context.add)}
                   className="primary-button"
+                  disabled={!(this.state.size && this.state.color)}
                 >
                   Buy Now
                 </button>

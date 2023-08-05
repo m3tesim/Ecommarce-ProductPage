@@ -50,7 +50,7 @@ function CartItem(props) {
           size: {product.size || product.size[0]}
         </span>
         <span className="gray-text">
-          color: {product.color["name"] || product.color[0]["name"]}
+          color: {product.color[0]["name"] || product.color}
         </span>
         <span className="red-text ">{product.price} EGP</span>
       </div>

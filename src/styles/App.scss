@@ -258,6 +258,9 @@
     height: 50px;
     display: block;
   }
+  button:disabled {
+    background-color: #707070;
+  }
   .buttons-container {
     margin-top: 3rem;
     margin-bottom: 30px;
