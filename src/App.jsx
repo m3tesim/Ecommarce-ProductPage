@@ -1,5 +1,6 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./styles/App.scss";
-
 import React, { Component } from "react";
 import NavBar from "./components/NavBar";
 import ProductPage from "./pages/ProductPage";

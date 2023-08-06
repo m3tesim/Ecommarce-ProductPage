@@ -38,15 +38,13 @@
 //card styles
 
 .card-container {
-  display: flex;
-  justify-content: space-between;
-
   .card {
     position: relative;
     place-items: center;
     padding: 25px 20px;
     border: 1px solid $secondary-color;
     border-radius: 15px;
+    margin-inline: 1rem;
   }
   .title {
     line-height: 150%;

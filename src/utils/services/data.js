@@ -42,6 +42,51 @@ export const products = [
   },
   {
     name: "Product Name",
+    price: 3000,
+    description:
+      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+    rating: 3,
+    imgURL: item3,
+    size: ["2*3M", "4*3M", "4*4M"],
+    color: [
+      { name: "white", value: "#FFFFFF" },
+      { name: "black ", value: "#000000" },
+      { name: "blue", value: "#0052D3" },
+      { name: "yellow", value: "#FCBC04" },
+    ],
+  },
+  {
+    name: "Product Name",
+    price: 3000,
+    description:
+      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+    rating: 3,
+    imgURL: item4,
+    size: ["2*3M", "4*3M", "4*4M"],
+    color: [
+      { name: "white", value: "#FFFFFF" },
+      { name: "black ", value: "#000000" },
+      { name: "blue", value: "#0052D3" },
+      { name: "yellow", value: "#FCBC04" },
+    ],
+  },
+  {
+    name: "Product Name",
+    price: 3000,
+    description:
+      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+    rating: 3,
+    imgURL: item2,
+    size: ["2*3M", "4*3M", "4*4M"],
+    color: [
+      { name: "white", value: "#FFFFFF" },
+      { name: "black ", value: "#000000" },
+      { name: "blue", value: "#0052D3" },
+      { name: "yellow", value: "#FCBC04" },
+    ],
+  },
+  {
+    name: "Product Name",
     price: 300,
     description:
       "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
