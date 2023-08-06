@@ -14,9 +14,9 @@ export default class intro extends Component {
         <div className="logo-intro">
           <img src="/images/logo.png" alt="LOGO" />
         </div>
-        <div class="bar-container">
-          <div class="progress2 progress-moved">
-            <div class="progress-bar2"></div>
+        <div className="bar-container">
+          <div className="progress2 progress-moved">
+            <div className="progress-bar2"></div>
           </div>
         </div>
       </div>

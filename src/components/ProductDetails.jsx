@@ -35,7 +35,6 @@ class ProductDetails extends Component {
     contextCallBack(products);
   };
   render() {
-    console.log(this.state.size);
     const { product } = this.props;
 
     const stars = [];
