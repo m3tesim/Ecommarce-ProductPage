@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/NasNAv-reactTest/static/css/main.e829d624.css",
-    "main.js": "/NasNAv-reactTest/static/js/main.2e3ca20c.js",
+    "main.js": "/NasNAv-reactTest/static/js/main.be55b9a7.js",
     "static/media/Poppins-Regular.ttf": "/NasNAv-reactTest/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/item1.png": "/NasNAv-reactTest/static/media/item1.c439fbbcf40bc11b36a4.png",
     "static/media/item3.png": "/NasNAv-reactTest/static/media/item3.a8832cfec7859372980e.png",
@@ -22,10 +22,10 @@
     "index.html": "/NasNAv-reactTest/index.html",
     "static/media/star.svg": "/NasNAv-reactTest/static/media/star.beca290a3b67c4ad2e9fd25ab01df9c6.svg",
     "main.e829d624.css.map": "/NasNAv-reactTest/static/css/main.e829d624.css.map",
-    "main.2e3ca20c.js.map": "/NasNAv-reactTest/static/js/main.2e3ca20c.js.map"
+    "main.be55b9a7.js.map": "/NasNAv-reactTest/static/js/main.be55b9a7.js.map"
   },
   "entrypoints": [
     "static/css/main.e829d624.css",
-    "static/js/main.2e3ca20c.js"
+    "static/js/main.be55b9a7.js"
   ]
 }
