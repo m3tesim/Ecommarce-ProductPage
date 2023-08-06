@@ -44,7 +44,7 @@
     position: relative;
     place-items: center;
     padding: 25px 20px;
-    border: 1px solid $darkGray-color;
+    border: 1px solid $secondary-color;
     border-radius: 15px;
   }
   .title {
@@ -120,7 +120,7 @@
 
 .primary-button {
   border: none;
-  background-color: black;
+  background-color: $primary-color;
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 5px;
@@ -168,7 +168,7 @@
     font-weight: 600;
   }
   .old-price {
-    color: $darkGray-color;
+    color: $secondary-color;
     font-style: bold;
     font-size: 23.02px;
     font-weight: 600;
@@ -195,7 +195,7 @@
     cursor: pointer;
   }
   .border {
-    border: 0.5px solid black;
+    border: 0.5px solid $primary-color;
   }
   .checked {
     border: 1.644px solid #b93c3c;
@@ -239,11 +239,11 @@
     border-radius: 15px;
   }
   .main-img {
-    border: 0.5px solid $darkGray-color;
+    border: 0.5px solid $secondary-color;
     padding: 35px 30px;
   }
   .side-img {
-    border: 0.5px solid $darkGray-color;
+    border: 0.5px solid $secondary-color;
     padding: 10px;
     margin-bottom: 10px;
   }
@@ -303,7 +303,7 @@
   height: 50px;
   flex-shrink: 0;
   border-radius: 11.51px;
-  border: 0.708px solid #d9d9d9;
+  border: 0.708px solid $secondary-color;
   cursor: pointer;
 }
 
@@ -367,7 +367,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding-top: 2rem;
     padding-bottom: 1rem;
-    border-bottom: 0.5px solid $darkGray-color;
+    border-bottom: 0.5px solid $secondary-color;
   }
   .info {
     display: flex;
@@ -383,7 +383,6 @@
   }
 
   .total {
-    font-family: Montserrat;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
