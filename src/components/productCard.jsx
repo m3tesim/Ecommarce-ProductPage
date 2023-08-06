@@ -2,6 +2,7 @@ import React from "react";
 import { ReactComponent as Heart } from "../utils/icons/heart.svg";
 import { ReactComponent as Star } from "../utils/icons/star.svg";
 import { ReactComponent as Hover } from "../utils/icons/hover.svg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function ProductCard(props) {
   const { product } = props;
@@ -17,7 +18,10 @@ export default function ProductCard(props) {
         <Hover />
       </div>
       <div className="img-container">
-        <img src={product?.imgURL} alt="product" />
+        <LazyLoadImage
+          alt={"product"}
+          src={product?.imgURL} // use normal <img> attributes as props
+        />
       </div>
       <p className="title"> {product?.name}</p>
       <p className="description">{product?.description}</p>
