@@ -38,32 +38,39 @@ class NavBar extends Component {
   };
   render() {
     return (
-      <div className="nav-container">
-        <div className="headers">
-          <img height={52} src="/images/logo.png" alt="LOGO" />
-          <ul>
-            {headers.map((i) => (
-              <li key={i}>{i}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="nav-icons" ref={this.wrapper}>
-          <div className="icon">
-            <SearchIcon />
+      <>
+        {this.state.dropDown && <div className="black-background"></div>}
+        <div className="nav-container">
+          <div className="headers">
+            <img height={52} src="/images/logo.png" alt="LOGO" />
+            <ul>
+              {headers.map((i) => (
+                <li key={i}>{i}</li>
+              ))}
+            </ul>
           </div>
-          <div
-            onClick={() => this.dropDown(!this.state.dropDown)}
-            className="icon cartDown"
-          >
-            <CartIcon />
-          </div>
-          {this.state.dropDown && <Cart />}
+          <div className="nav-icons" ref={this.wrapper}>
+            <div className="icon">
+              <SearchIcon />
+            </div>
+            <div
+              onClick={() => this.dropDown(!this.state.dropDown)}
+              className="icon cartDown"
+            >
+              <CartIcon />
+            </div>
+            {this.state.dropDown && (
+              <div>
+                <Cart />
+              </div>
+            )}
 
-          <div className="icon">
-            <ProfileIcon />
+            <div className="icon">
+              <ProfileIcon />
+            </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }
