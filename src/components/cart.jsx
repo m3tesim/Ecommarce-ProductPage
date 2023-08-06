@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { products } from "../utils/services/data";
 import { ReactComponent as TrashIcon } from "../utils/icons/trash.svg";
 import { CartContext } from "./CartItemsProvider";
 export default class Cart extends Component {
@@ -13,7 +12,7 @@ export default class Cart extends Component {
               <div className="cart-body">
                 <div className="title">My Cart ({context.products.length})</div>
 
-                {context.products.length > 0 && (
+                {context.products.length > 0 ? (
                   <div>
                     <div>
                       {context.products?.map((p, index) => (
@@ -26,6 +25,10 @@ export default class Cart extends Component {
                     </div>
 
                     <button className="primary-button">Go To Cart</button>
+                  </div>
+                ) : (
+                  <div>
+                    <p>Cart is Empty</p>
                   </div>
                 )}
               </div>

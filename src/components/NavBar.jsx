@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { ReactComponent as ProfileIcon } from "../utils/icons/profile.svg";
 import { ReactComponent as SearchIcon } from "../utils/icons/search.svg";
 import { ReactComponent as CartIcon } from "../utils/icons/shopping-cart.svg";
+import { CartContext } from "./CartItemsProvider";
+
 import Cart from "./cart";
 const headers = [
   "Products",
@@ -53,12 +55,18 @@ class NavBar extends Component {
             <div className="icon">
               <SearchIcon />
             </div>
-            <div
-              onClick={() => this.dropDown(!this.state.dropDown)}
-              className="icon cartDown"
-            >
-              <CartIcon />
-            </div>
+            <CartContext.Consumer>
+              {(context) => (
+                <div
+                  onClick={() => this.dropDown(!this.state.dropDown)}
+                  className="icon cartDown"
+                >
+                  <div className="tag">{context.products.length}</div>
+                  <CartIcon />
+                </div>
+              )}
+            </CartContext.Consumer>
+
             {this.state.dropDown && (
               <div>
                 <Cart />

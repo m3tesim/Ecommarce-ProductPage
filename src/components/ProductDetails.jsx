@@ -26,8 +26,13 @@ class ProductDetails extends Component {
     let product = { ...this.props.product };
     product.size = this.state.size;
     product.color = this.state.color;
-    contextCallBack(product);
-    this.setState({ color: null, size: null });
+    let products = [product];
+    for (let i = 1; i < this.state.count; i++) {
+      products.push(product);
+    }
+    this.setState({ color: null, size: null, count: 1 });
+
+    contextCallBack(products);
   };
   render() {
     console.log(this.state.size);

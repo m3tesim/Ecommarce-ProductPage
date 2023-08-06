@@ -1,16 +1,15 @@
 import React from "react";
-import { currentProduct } from "../utils/services/data";
 // Create a new context
 const CartContext = React.createContext();
 
 class CartItemProvider extends React.Component {
   state = {
-    products: [currentProduct],
+    products: [],
   };
 
   addProduct = (product) => {
     this.setState({
-      products: [...this.state.products, product],
+      products: [...this.state.products, ...product],
     });
   };
   render() {
